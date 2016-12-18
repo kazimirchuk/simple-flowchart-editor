@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendor/sdrdis-jquery.flowchart/jquery.flowchart.css">
+    <link rel="stylesheet" href="./application.css">
+  </head>
+  <body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+
+      <!--<button class="btn btn-default navbar-btn" id="getData">Get data</button>-->
+    </div>
+  </nav>
+    <div class="wrapper container">
+      <div class="row">
+        <div class="sidebar col-md-2">
+          <div class="draggable_operators">
+            <h3>Building blocks</h3>
+            <ul class="list-unstyled">
+              <li class="draggable_operator flowchart-terminal ui-draggable ui-draggable-handle" data-nb-inputs="0" data-nb-outputs="1" id="start">Start</li>
+              <li class="draggable_operator flowchart-terminal ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="0" id="end">End</li>
+              <li class="draggable_operator flowchart-process ui-draggable ui-draggable-handle" data-nb-inputs="2" data-nb-outputs="1" id="process">Process</li>
+              <li class="draggable_operator flowchart-io ui-draggable ui-draggable-handle" data-nb-inputs="2" data-nb-outputs="1" id="io">IO</li>
+              <li class="draggable_operator flowchart-decision ui-draggable ui-draggable-handle" data-nb-inputs="2" data-nb-outputs="2" id="decision">Decision</li>
+            </ul>
+            <h3>Actions</h3>
+            <ul class="list-unstyled">
+              <li class="btn btn-danger" id="deleteSelected">Delete selected operator/link</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="chart_container">
+            <div class="flowchart-container" id="flowchart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row flowchart-form">
+        <form id="operatorProperties">
+          <div class="form-group">
+            <label for="operatorTitle">Operator title:</label>
+            <input type="text" class="form-control" id="operatorTitle"/></div>
+          <div class="form-group">
+            <label for="buildingBlockContent">Building block content</label>
+            <textarea rows="5" class="form-control" id="buildingBlockContent"></textarea>
+          </div>
+          <!--<div class="form-group">-->
+            <!--<label for="flowchartData">Flowchart data</label>-->
+            <!--<textarea rows="20" class="form-control" id="flowchartData"></textarea>-->
+          <!--</div>-->
+        </form>
+        <form id="linkProperties">
+          <div class="form-group">
+            <label for="linkColor">Link color:</label>
+            <input type="text" class="form-control" id="linkColor"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script data-main="./config.js" src="./require.js"></script>
+</html>

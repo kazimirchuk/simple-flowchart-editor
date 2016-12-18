@@ -1,0 +1,70 @@
+.wrapper {
+    width: 100%;
+}
+
+.chart_container {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: repeating-linear-gradient( 45deg, #eee, #eee 10px, #e5e5e5 10px, #e5e5e5 20px );
+}
+
+.flowchart-container {
+    z-index: 0;
+    /*height: 500px;*/
+    /*width: 800px;*/
+    background: white;
+    height: 2000px;
+    width: 2000px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flowchart-operator-connector-arrow {
+    top: 4px;
+}
+
+.flowchart-operator-connector-small-arrow {
+    top: 9px;
+}
+
+#create_operator {
+    margin-bottom: 10px;
+}
+
+#operatorProperties, #linkProperties {
+    display: none;
+}
+
+.draggable_operator {
+    padding: 2px 5px 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: hand;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently                                  not supported by any browser */
+}
+
+.sidebar {
+    margin-left: 15px;
+}
+
+.flowchart-form {
+    margin: auto;
+    width: 90%;
+}
+
+.flowchart-operator-content {
+    text-align: center;
+}
